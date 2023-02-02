@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+
+import './css/style.scss';
+
+import {Route ,  Routes  } from 'react-router-dom';
+import SiteHome from "./routes/home";
+import SiteLogement from "./routes/logementFiche";
+import SiteAbout from "./routes/about";
+import SiteNotFound from "./routes/Notfound"
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+
+  
+    let routes = (
+      <Routes>
+        <Route exact path='/' element={<SiteHome/>}></Route>
+        <Route path="logement/:logementId" element={<SiteLogement/>}></Route>
+        <Route path='about' element={<SiteAbout/>}></Route>
+        <Route path="*" element={<SiteNotFound/>}></Route>
+  
+  
+      </Routes>
+      
+    )
+     
+    
+  
+    
+    return routes
+ }
+
 
 export default App;

@@ -1,0 +1,37 @@
+.headerClass {
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    >img {
+        margin-right: auto;
+        margin-left: 3%;
+    }
+    >nav{
+        margin-left: auto;
+        margin-right: 3%;
+    }
+}
+
+body{
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footerClass{
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: black;
+    
+    >img {
+        filter:  brightness(0) invert(1);
+        margin: auto auto 30px auto;
+    }
+    >h2{
+        color: white;
+    }
+}
