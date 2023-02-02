@@ -6,7 +6,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import SiteFooter from './element/Footer';
 import SiteHeader from './element/Header';
-import { BrowserRouter as Router ,   redirect,   Route ,  Routes  , useParams} from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 //import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
