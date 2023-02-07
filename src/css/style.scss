@@ -1,3 +1,5 @@
+@import "./Animation.scss";
+
 $kasaOrange :#FF6060;
 
 
@@ -136,12 +138,21 @@ body{
 }
 
 .InfoList{
-    background-color: #F7F7F7;
-    width: 100%;
-    border-radius: 10px;
+    
+    position: relative;
+
+    
+
     .InfoListContent{
         padding: 2%;
         justify-content: left;
+        transform-origin: top;
+      background-color: #F7F7F7;
+        animation: 200ms infolistOpen;
+        border-radius: 10px;
+        position: relative;
+        z-index: 5;
+        top: -5px;
     }
 }
 .InfoListButton{
@@ -155,16 +166,64 @@ body{
         display: inline-block;
         font-size: 16px;
         width: 100%;
+  
         border-radius: 10px;
+        position: relative;
+        z-index: 10;
+       
       
 }
 .infolistAbout{
     display: flex;
     gap: 20px;
     flex-direction: column;
+    margin-bottom: 5%;
 }
 #root{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+}
+
+.listblock{
+    display: flex;
+    gap: 20px;
+    .listelement50{
+        width: 50%;
+    }
+}
+
+.url404{
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    .big404{
+        font-size: 288px;
+        font-weight: 700;
+        
+    }
+    .oupstext{
+        font-size: 36px;
+        font-weight: 500;
+    }
+    > a {
+        margin: 100px;
+        font-size: 15px;
+        font-weight: 500;
+    }
+}
+.aboutImage{
+    height: 230px;
+    border-radius: 30px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    >img{
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-radius: 30px;
+    }
 }

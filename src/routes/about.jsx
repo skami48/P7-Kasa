@@ -1,8 +1,14 @@
 import InfoList from "../element/InfoList";
 
+import AboutImage from "../img/kalen-emsley-Bkci_8qcdvQ-unsplash.jpg"
+
 export default function SiteAbout(){
     return (
         <main>
+            <div className="aboutImage" >
+            <img src={AboutImage} alt="une montagne"/>
+            </div>
+            
             <div className="infolistAbout">
                 <InfoList title="Fiabilité" content="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes." />
                 <InfoList title="Respect" content="La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme." />

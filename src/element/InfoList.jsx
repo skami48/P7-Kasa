@@ -10,7 +10,6 @@ export default function InfoList({title, content}){
 
     return(<div className='InfoList'><button className='InfoListButton' onClick={()=> showMoreContent(!showMore)}>{title}
     </button>
-   
     {showMore?  <div className='InfoListContent'>{content}</div>:<></>}
     
     </div>
