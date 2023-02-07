@@ -1,22 +1,51 @@
+$kasaOrange :#FF6060;
+
+
+@font-face {
+    font-family: Montserrat;
+    src: url("../font/Montserrat-VariableFont_wght.ttf");
+}
+
+*{
+    font-family: Montserrat;
+    color:$kasaOrange;
+}
+
 .headerClass {
     height: 120px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0 3% 0 4%;
+
     >a>img {
         margin-right: auto;
         margin-left: 3%;
     }
     >nav{
         margin-left: auto;
+        width: 30%;
+        display: flex;
+        gap: 5%;
         margin-right: 3%;
+        justify-content: flex-end;
+        >a{
+            font-size: 24px;
+            font-weight: 600;
+        }
+
     }
 }
 
 body{
     max-width: 1440px;
+
     margin-left: auto;
     margin-right: auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  
+
 }
 
 .footerClass{
@@ -26,6 +55,9 @@ body{
     justify-content: flex-end;
     align-items: center;
     background-color: black;
+    margin-top: auto;
+
+    
     
     >img {
         filter:  brightness(0) invert(1);
@@ -75,23 +107,64 @@ body{
     height: 340px;
     border-radius: 10px;
     margin-bottom: 20px;
+    position: relative;
     display: flex;
     align-items: flex-end;
     background-size: cover;
     background-repeat: no-repeat;
-    >img{
+    > .ThumbImage{
+
+        object-fit: cover;
         width: 100%;
+        height: 100%;
+        border-radius: inherit;
     }
 
 }
 .ThumbTitleBloc{
-    height: 30%;
+    /*height: 30%;*/
     width: 100%;
     border-radius: 0px 0px 10px 10px;
+    position: absolute;
     background: linear-gradient(180deg,rgba(221, 221, 221, 0) 0%, rgba(0, 0, 0, 0.925) 100%) ;
     >h4{
         margin-top: 30px;
         color: white;
         margin-left: 2%;
     }
+
+}
+
+.InfoList{
+    background-color: #F7F7F7;
+    width: 100%;
+    border-radius: 10px;
+    .InfoListContent{
+        padding: 2%;
+        justify-content: left;
+    }
+}
+.InfoListButton{
+   
+        background-color: $kasaOrange; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align:start;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        width: 100%;
+        border-radius: 10px;
+      
+}
+.infolistAbout{
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+#root{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }

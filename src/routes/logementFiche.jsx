@@ -1,6 +1,7 @@
 import Carrousel from "../element/carrousel";
 import { items } from "../element/Itemslist";
 import { Navigate, useParams } from 'react-router-dom'
+import InfoList from "../element/InfoList";
 
 
 export default function SiteLogement(){
@@ -26,6 +27,7 @@ export default function SiteLogement(){
                 <div>
                     <div>user</div>
                     <div>note</div>
+                    <InfoList title = "Description" content={index.description}/>
                 </div>
                 
             </main>

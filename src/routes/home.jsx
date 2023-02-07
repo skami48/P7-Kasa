@@ -7,6 +7,7 @@ export default function SiteHome(){
         <main className="app">
             <SiteBanner/>
             <ThumbList/>
+            
         </main>
         
     );

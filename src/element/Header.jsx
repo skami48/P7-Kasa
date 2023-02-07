@@ -9,8 +9,8 @@ function SiteHeader(){
      <img src={logo} alt="logo" />
      </Link>
         <nav className="Head_Nav">
-            <a href="http://localhost:3000/">Acceuil</a>
-            <a href="http://localhost:3000/">A Propos</a>
+            <Link to="/">Acceuil</Link>
+            <Link to="/About/">A Propos</Link>
         </nav>
         </header>
    );
