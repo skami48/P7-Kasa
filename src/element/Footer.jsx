@@ -1,9 +1,10 @@
 import logo from "../img/logo.svg"
+import AsyncImage from "./asyncImageLoading";
 
 
 function SiteFooter(){
     return ( <footer className="footerClass">
-    <img src={logo} alt="logo"/>
+    <AsyncImage src={logo} alt="logo"/>
     <h2>© 2020 Kasa. All rights reserved</h2>
     </footer>
     );

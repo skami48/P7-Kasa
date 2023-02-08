@@ -2,6 +2,7 @@ import Carrousel from "../element/carrousel";
 import { items } from "../element/Itemslist";
 import { Navigate, useParams } from 'react-router-dom'
 import InfoList from "../element/InfoList";
+import AsyncImage from "../element/asyncImageLoading";
 
 
 
@@ -10,13 +11,17 @@ export default function SiteLogement(){
  
     const index = {items}.items.find(x=> x.id==={logementId}.logementId)
     const equipmentsList = ()=>{ 
-        let x = 0;
+       
         const equiplist = index.equipments.map((i,x) => <div key ={ x}>{i}</div>);
 
 
 
     return equiplist;
 }
+    const tagList = ()=>{
+        const tag = index.tags.map((i,x) => <div className="LogementTags" key={x}>{i}</div>  );
+        return tag
+    }
     
     if(index){
         
@@ -25,25 +30,32 @@ export default function SiteLogement(){
             <main>
                 <Carrousel/>
                 <div className="Logement_bloc_title">
-                    <h2 className="logmentTitle">{index.title}</h2>
+                    <div className="logmentTitle">
+                    <h2 >{index.title}</h2>
                     <h4>{index.location}</h4>
-                    <div className="tagbloc">
-                        <div>Tags here</div>
-                        <div>Tags here</div>
-                        <div>Tags here</div>
-                        <div>Tags here</div>
+                        <div className="tagbloc">{tagList()}
+
+                        </div>
                     </div>
-                </div>
-                <div>
-                    <div>user</div>
+                    <div className="UserandNote">
+                    <div>
+                        <div>{index.host.name}</div>
+                        <div className="userImage">
+                        <AsyncImage src={index.host.picture} alt={index.host.name}/>
+                        </div>
+                        
+                    </div>
                     <div>note</div>
+                </div>
+                </div>
+                
                     <div className="listblock">
                         <div className="listelement50">
                         <InfoList title = "Description" content={index.description}/>
                         </div>
                         <div className="listelement50">
                         <InfoList title = "Équipements" content={equipmentsList()}/>
-                        </div>
+                        
                     </div>
                     
                 </div>
