@@ -1,6 +1,7 @@
 @import "./Animation.scss";
 
 $kasaOrange :#FF6060;
+$kasaBorwn : #F6F6F6;
 
 
 @font-face {
@@ -11,6 +12,10 @@ $kasaOrange :#FF6060;
 *{
     font-family: Montserrat;
     color:$kasaOrange;
+}
+
+main{
+    margin-bottom: 20px;
 }
 
 .headerClass {
@@ -91,7 +96,7 @@ body{
     }
 }
 .ThumbList{
-    background-color: #F6F6F6;
+    background-color: $kasaBorwn;
     width: 100%;
     margin-top: 20px;
     border-radius: 30px;
@@ -163,10 +168,10 @@ body{
         padding: 15px 32px;
         text-align:start;
         text-decoration: none;
-        display: inline-block;
+       
         font-size: 16px;
         width: 100%;
-  
+        display: flex;
         border-radius: 10px;
         position: relative;
         z-index: 10;
@@ -273,5 +278,59 @@ body{
             object-fit: cover;
             border-radius: 50%;
         }
+    }
+}
+
+.orangeStar{
+    color: $kasaOrange;
+}
+.Star{
+    color : $kasaBorwn ;
+    >path{
+        color : #E3E3E3 ;
+    }
+}
+
+.AngleUp{
+    margin-left: auto;
+    color: white;
+    >path{
+        color: white;
+    }
+}
+
+
+.Carrousel{
+    width: 100%;
+    height: 420px;
+    overflow: hidden;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    .arrows{
+        position: absolute;
+        font-size: 100px;
+        top: 170px;
+        text-align: center;
+        background-color: transparent;
+        border: transparent;
+        path{
+            color: white;
+        }
+       
+    }
+    .Left{
+        left: 2%;
+        
+        
+    }
+    .Right{
+        right: 2%;
+
+    }
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 }

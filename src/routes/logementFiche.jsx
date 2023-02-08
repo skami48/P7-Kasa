@@ -3,6 +3,8 @@ import { items } from "../element/Itemslist";
 import { Navigate, useParams } from 'react-router-dom'
 import InfoList from "../element/InfoList";
 import AsyncImage from "../element/asyncImageLoading";
+import { faStar } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
 
@@ -22,13 +24,26 @@ export default function SiteLogement(){
         const tag = index.tags.map((i,x) => <div className="LogementTags" key={x}>{i}</div>  );
         return tag
     }
+
+    const noteCounter = ()=>{
+        let note= []
+        for (let i = 0; i < 5; i++) {
+            if(i<index.rating){
+                note.push(<FontAwesomeIcon  key ={i}  icon={faStar} className="orangeStar"  />)
+            }else{
+                note.push(<FontAwesomeIcon   key ={i} icon={faStar} className="Star" />)
+            }
+        }
+        return note;
+    }
+
     
     if(index){
         
      
         return (
             <main>
-                <Carrousel/>
+                <Carrousel ImageArray={index.pictures}/>
                 <div className="Logement_bloc_title">
                     <div className="logmentTitle">
                     <h2 >{index.title}</h2>
@@ -45,7 +60,7 @@ export default function SiteLogement(){
                         </div>
                         
                     </div>
-                    <div>note</div>
+                    <div>{noteCounter()}</div>
                 </div>
                 </div>
                 
