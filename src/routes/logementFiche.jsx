@@ -2,7 +2,7 @@ import Carrousel from "../element/carrousel";
 import { items } from "../element/Itemslist";
 import { Navigate, useParams } from 'react-router-dom'
 import InfoList from "../element/InfoList";
-import AsyncImage from "../element/asyncImageLoading";
+//import AsyncImage from "../element/asyncImageLoading";
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
@@ -48,15 +48,16 @@ export default function SiteLogement(){
                     <div className="logmentTitle">
                     <h2 >{index.title}</h2>
                     <h4>{index.location}</h4>
-                        <div className="tagbloc">{tagList()}
 
-                        </div>
+                    </div>
+                    <div className="tagbloc">{tagList()}
+
                     </div>
                     <div className="UserandNote">
                     <div>
-                        <div>{index.host.name}</div>
+                        <div className="Username">{index.host.name}</div>
                         <div className="userImage">
-                        <AsyncImage src={index.host.picture} alt={index.host.name}/>
+                        <img src={index.host.picture} alt={index.host.name}/>
                         </div>
                         
                     </div>

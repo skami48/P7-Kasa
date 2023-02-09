@@ -1,4 +1,4 @@
-import AsyncImage from "../element/asyncImageLoading";
+//import AsyncImage from "../element/asyncImageLoading";
 import InfoList from "../element/InfoList";
 
 import AboutImage from "../img/kalen-emsley-Bkci_8qcdvQ-unsplash.jpg"
@@ -7,7 +7,7 @@ export default function SiteAbout(){
     return (
         <main>
             <div className="aboutImage" >
-            <AsyncImage src={AboutImage} alt="une montagne"/>
+            <img src={AboutImage} alt="une montagne"/>
             </div>
             
             <div className="infolistAbout">

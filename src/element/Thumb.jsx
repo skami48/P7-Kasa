@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import AsyncImage from "./asyncImageLoading"
+//import AsyncImage from "./asyncImageLoading"
 
 
 export default function Thumb(item){
@@ -7,7 +7,7 @@ export default function Thumb(item){
     
     return(
         <Link to={pageLink}className="Thumb" >
-                <AsyncImage className="ThumbImage" src={item.item.cover} alt={item.item.title}/>
+                <img className="ThumbImage" src={item.item.cover} alt={item.item.title}/>
                 <div className="ThumbTitleBloc">
                     
                     <h4>{item.item.title}</h4>

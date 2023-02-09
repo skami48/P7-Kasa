@@ -1,13 +1,13 @@
 import logo from "../img/logo.svg"
 import { Link } from 'react-router-dom'
-import AsyncImage from "./asyncImageLoading";
+//import AsyncImage from "./asyncImageLoading";
 
 
 function SiteHeader(){
     return ( 
         <header className="headerClass">
      <Link to="/" >
-     <AsyncImage src={logo} alt="logo" />
+     <img src={logo} alt="logo" />
      </Link>
         <nav className="Head_Nav">
             <Link to="/">Acceuil</Link>
