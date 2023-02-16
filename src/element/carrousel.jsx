@@ -1,7 +1,6 @@
 import '../css/style.scss';
 
 import React ,{useEffect, useState} from 'react';
-import AsyncImage from './asyncImageLoading';
 import { faAngleUp } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
