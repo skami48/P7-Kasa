@@ -28,7 +28,7 @@ function SiteHeader(){
      <img src={logo} alt="logo" />
      </Link>
         <nav className="Head_Nav">
-            <Link  to="/">{underlineNav( "","Acceuil")}</Link>
+            <Link  to="/">{underlineNav( "","Accueil")}</Link>
             <Link  to="/About/">{underlineNav("About", "A Propos")}</Link>
         </nav>
         </header>
